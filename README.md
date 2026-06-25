@@ -6,7 +6,7 @@ Our code is based on 2D3D-MATR. In the inference stage, we insert the 2d-3d corr
 
 **2. Pre-processing of metric depth**
 
-We implement an easy voting algorithm to estimate the coarse scale of metric depth with the initial correspondences. please see **lines 161-227**
+We implement an easy voting algorithm to estimate the coarse scale of metric depth with the initial correspondences. please see **lines 161-227**.
 
 **3. Collection of compared methods**
 
@@ -18,4 +18,6 @@ Our I2P dataset is to generate I2P data from RGB-D data, so that the GT pose is 
 
 **5. Other comments**
 
-todo
+We first train a 2D3D-MATR on 7-Scenes dataset (only using the Chess scene) and get its PTH file. As Github cannot upload the file larger than 25MB, we will upload the PTH file in other way soon. In the next, we consider the **cross-dataset** evaluation setting. Use this PTH file to infer 2D3D-MATR in the other dataset like RGBD-v2. We can evaluate the pruning methods (1)-(7) in this way. Train.py, Test.py, and Eval.py are the nearly same with the official codes of 2D3D-MATR.  
+
+In the main experiments, we use the DepthAnythingv2-metric-depth.vitl (indoor scene) to provide the predicted metric depth. 
